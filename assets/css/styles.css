@@ -75,6 +75,8 @@ body {
   background-color: var(--white);
   line-height: 1.6;
   color: var(--black);
+  overflow-x: hidden;
+  max-width: 100vw;
 }
  
 main {
@@ -817,3 +819,41 @@ footer {
 
 /* Responsividade - Celular */
 @media screen and (max-width: 480px) {
+  
+  /* Diminui o respiro lateral para dar mais espaço ao conteúdo */
+  .section-container {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  /* Ajusta o título principal para não quebrar feio na tela */
+  .hero-content h1 {
+    font-size: var(--text-2xl);
+  }
+
+  /* Garante que o formulário use toda a largura disponível sem vazar */
+  .contact-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Reduz os ícones das redes sociais para caberem lado a lado */
+  .social-container {
+    gap: var(--spacing-sm);
+  }
+
+  .social-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  /* Ajusta os botões do card de projetos */
+  .project-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .project-buttons .botao,
+  .project-buttons .botao-outline {
+    width: 100%;
+  }
+}
