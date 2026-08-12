@@ -821,7 +821,6 @@ footer {
 @media screen and (max-width: 480px) {
 
     /* Responsividade Celular - Seção Hero */
-
     .hero-container {
         flex-direction: column-reverse;
         gap: var(--spacing-lg);
@@ -851,7 +850,6 @@ footer {
     }
 
     /* Responsividade Celular Seção About*/
-
     .about-container {
         flex-direction: column;
         gap: var(--spacing-lg);
@@ -890,10 +888,9 @@ footer {
         width: 100%;
     }
 
-    /* Responsividade Celular Seção AProjects*/
+    /* Responsividade Celular Seção Projects*/
     .projects-container {
         margin: var(--spacing-sm) 0.25rem;
-
     }
 
     .projects-swiper {
@@ -906,8 +903,6 @@ footer {
         max-width: 100%;
         height: auto;
         min-height: 24rem;
-
-
     }
 
     .project-content {
@@ -922,8 +917,6 @@ footer {
     }
 
     .project-content p {
-        /* flex: 1;
-        overflow: hidden; */
         flex: 1;
         font-size: var(--text-sm);
         line-height: 1.4;
@@ -957,7 +950,6 @@ footer {
         padding: 0.45rem 0.85rem;
         font-size: 0.75rem;
     }
-
     /* até aqui - Referencia para futuras mudanças << */
 
     .swiper-wrapper {
@@ -977,13 +969,28 @@ footer {
     }
 
     /* Responsividade Celular - Seção Contacts */
-
     .contact-container {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
         width: 90%;
         margin: 0 auto;
     }
+
+    /* === AQUI ESTÁ O CÓDIGO DAS REDES SOCIAIS ADICIONADO === */
+    .social-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem; 
+        width: 100%;
+    }
+
+    .social-icon {
+        width: 3.2rem;  
+        height: 3.2rem; 
+        padding: 0.5rem;
+    }
+    /* ======================================================== */
 
     /* Responsividade Celular - Seção Success */
     .success-container {
@@ -994,18 +1001,15 @@ footer {
     .success-content {
         gap: var(--spacing-md);
         max-width: 35rem;
-
     }
 
     .success-icon {
         width: 5rem;
         height: 5rem;
-
     }
 
     .success-icon img {
         width: 4rem;
         height: 4rem;
-
     }
 }
