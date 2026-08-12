@@ -122,8 +122,16 @@ async function getProjectsGithub() {
                 ? repositorio.topics.slice(0, 3).map(topic => `<span class="tag">${topic}</span>`).join('')
                 : `<span class="tag">${linguagem}</span>`;
 
-            const botaoDeploy = repositorio.homepage
-                ? `<a href="${repositorio.homepage}" target="_blank" class="botao-outline botao-sm">Deploy</a>`
+            // Descobrindo o link do deploy automaticamente
+            let linkDeploy = repositorio.homepage;
+
+            // Se não tiver link na engrenagem, mas o GitHub Pages estiver ativo, ele monta o link!
+            if (!linkDeploy && repositorio.has_pages) {
+                linkDeploy = `https://kauedota.github.io/${repositorio.name}/`;
+            }
+
+            const botaoDeploy = linkDeploy
+                ? `<a href="${linkDeploy}" target="_blank" class="botao-outline botao-sm">Deploy</a>`
                 : ''
 
             const botoesAcao = `
