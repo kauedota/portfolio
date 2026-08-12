@@ -817,52 +817,195 @@ footer {
 
 }
 
-/* Responsividade - Celular */
+/* Responsividade Celular */
 @media screen and (max-width: 480px) {
-  
-  /* Diminui o respiro lateral para dar mais espaço ao conteúdo */
-  .section-container {
-    padding: var(--spacing-lg) var(--spacing-sm);
-  }
 
-  /* Ajusta o título principal para não quebrar feio na tela */
-  .hero-content h1 {
-    font-size: var(--text-2xl);
-  }
+    /* Responsividade Celular - Seção Hero */
 
-  /* Garante que o formulário use toda a largura disponível sem vazar */
-  .contact-container {
-    width: 100%;
-    margin: 0;
-  }
+    .hero-container {
+        flex-direction: column-reverse;
+        gap: var(--spacing-lg);
+        min-height: 60vh;
+        text-align: center;
+    }
 
-  /* Reduz os ícones das redes sociais para caberem lado a lado */
-  .social-container {
-    gap: var(--spacing-sm);
-  }
+    .hero-content,
+    .hero-image {
+        width: 90%;
+    }
 
-  .social-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-  
-  /* Ajusta os botões do card de projetos */
-  .project-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .project-buttons .botao,
-  .project-buttons .botao-outline {
-    width: 100%;
-  }
+    .hero-image img {
+        object-fit: cover;
+    }
 
-  /* Remove as margens duplas para o card ficar mais largo */
-  .projects-container {
-    margin: var(--spacing-sm) 0;
-  }
+    .buttons-container {
+        justify-content: center;
+        width: 100%;
+    }
 
-  .projects-swiper {
-    padding: var(--spacing-sm) 0 2.5rem;
-  }
+    .hero-container .botao,
+    .hero-container .botao-outline {
+        padding: 0.75rem 1.5rem;
+        font-size: var(--text-base);
+        white-space: nowrap;
+    }
+
+    /* Responsividade Celular Seção About*/
+
+    .about-container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        margin: var(--spacing-lg);
+        padding: var(--spacing-lg);
+    }
+
+    .about-image {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-image img {
+        max-width: 16rem;
+        width: 100%;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-buttons-data {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: stretch;
+    }
+
+    .about-buttons-data .botao {
+        margin-right: 0;
+    }
+
+    .data-container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Responsividade Celular Seção AProjects*/
+    .projects-container {
+        margin: var(--spacing-sm) 0.25rem;
+
+    }
+
+    .projects-swiper {
+        margin: 0;
+        padding: var(--spacing-sm) 0.5rem 2.5rem;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 24rem;
+
+
+    }
+
+    .project-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .project-content h3 {
+        font-size: var(--text-base);
+    }
+
+    .project-content p {
+        /* flex: 1;
+        overflow: hidden; */
+        flex: 1;
+        font-size: var(--text-sm);
+        line-height: 1.4;
+        overflow: hidden;
+    }
+
+    .project-tags {
+        min-height: auto;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    /* >> Adicionado para encaixar melhor no mobile  */
+    .tag {
+        padding: 0.15rem 0.4rem;
+        font-size: 0.6rem;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .project-buttons {
+        margin-top: var(--spacing-sm);
+        justify-content: center;
+        gap: var(--spacing-xs);
+        flex-wrap: wrap;
+    }
+
+    .project-buttons .botao,
+    .project-buttons .botao-outline {
+        min-width: 5.5rem;
+        padding: 0.45rem 0.85rem;
+        font-size: 0.75rem;
+    }
+
+    /* até aqui - Referencia para futuras mudanças << */
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        height: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    /* Responsividade Celular - Seção Contacts */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Responsividade Celular - Seção Success */
+    .success-container {
+        padding: var(--spacing-lg) var(--spacing-sm);
+        min-height: calc(100vh - 10rem);
+    }
+
+    .success-content {
+        gap: var(--spacing-md);
+        max-width: 35rem;
+
+    }
+
+    .success-icon {
+        width: 5rem;
+        height: 5rem;
+
+    }
+
+    .success-icon img {
+        width: 4rem;
+        height: 4rem;
+
+    }
 }
