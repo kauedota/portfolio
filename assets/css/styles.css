@@ -856,4 +856,13 @@ footer {
   .project-buttons .botao-outline {
     width: 100%;
   }
+
+  /* Remove as margens duplas para o card ficar mais largo */
+  .projects-container {
+    margin: var(--spacing-sm) 0;
+  }
+
+  .projects-swiper {
+    padding: var(--spacing-sm) 0 2.5rem;
+  }
 }
