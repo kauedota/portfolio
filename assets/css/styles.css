@@ -981,7 +981,7 @@ footer {
     .contact-container {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
     }
 
